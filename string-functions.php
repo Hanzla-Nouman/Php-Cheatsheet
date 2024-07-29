@@ -23,4 +23,25 @@ echo '<br>';
 echo ltrim("    Left Trimmed");
 echo '<br>';
 echo rtrim("    Right Trimmed       ");
+echo '<br>';
+echo date('j:i:s');
+echo '<br>';
+$favColor = array('hanzla'=>'blue','asad'=>'green','usama'=>'red');
+foreach ($favColor as $key => $value) {
+    echo $key.' likes color '.$value.'<br>';
+}
+echo '<br>';
+$multi_arr = array(array(1,0,3,4),array(5,7,7,8),array(9,4,8,3));
+for ($i=0; $i < count($multi_arr); $i++) { 
+    for ($j=0; $j < count($multi_arr[$i]); $j++) { 
+        echo $multi_arr[$i][$j].' ';
+    }
+    echo '<br>';
+}
 
+$num = 78;
+function print_value(){
+    global $num;
+    echo "The number is $num";
+};
+print_value();
