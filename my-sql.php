@@ -31,21 +31,37 @@ if (!$conn) {
 //    }
 
 // Craete a table in db
-$sqlForTable = "CREATE TABLE`staff2` (`Roll No.` INT NOT NULL AUTO_INCREMENT , `Name` VARCHAR(11) NOT NULL , `Age` INT NOT NULL , `Exp` INT NOT NULL , PRIMARY KEY (`Roll No.`)) ENGINE = InnoDB
-";
+// $sqlForTable = "CREATE TABLE`staff2` (`Roll No.` INT NOT NULL AUTO_INCREMENT , `Name` VARCHAR(11) NOT NULL , `Age` INT NOT NULL , `Exp` INT NOT NULL , PRIMARY KEY (`Roll No.`)) ENGINE = InnoDB
+// ";
 
-   if(mysqli_query($conn, $sqlForTable)){
-    echo "Table created successfully <br>";
-   }else{
-    echo "Error creating Table: ". mysqli_error($conn)."<br>";
-   }
+//    if(mysqli_query($conn, $sqlForTable)){
+//     echo "Table created successfully <br>";
+//    }else{
+//     echo "Error creating Table: ". mysqli_error($conn)."<br>";
+//    }
    
 // Insert data into table
-$sqlForTable = "INSERT INTO `staff2` (`Roll No.`, `Name`, `Age`, `Exp`) VALUES ('', 'Nouman', '23', '4');
-";
+// $sqlForTable = "INSERT INTO `staff2` (`Roll No.`, `Name`, `Age`, `Exp`) VALUES ('', 'Nouman', '23', '4');
+// ";
 
-   if(mysqli_query($conn, $sqlForTable)){
-    echo "Data inserted successfully <br>";
+//    if(mysqli_query($conn, $sqlForTable)){
+//     echo "Data inserted successfully <br>";
+//    }else{
+//     echo "Error in inserting data: ". mysqli_error($conn)."<br>";
+//    }
+
+   // Update data
+//    $sqlForUpdate = "UPDATE `contact` SET `name` = 'Hanzla' WHERE `contact`.`sno` = 12;";
+//    if(mysqli_query($conn, $sqlForUpdate)){
+//     echo "Data updated successfully <br>";
+//    }else{
+//     echo "Error in updating data: ". mysqli_error($conn)."<br>";
+//    }
+
+   // Deleting data
+   $sqlForDel = "DELETE FROM `contact` WHERE `contact`.`sno` = 4";
+   if(mysqli_query($conn, $sqlForDel)){
+    echo "Data deleted successfully <br>";
    }else{
-    echo "Error in inserting data: ". mysqli_error($conn)."<br>";
+    echo "Error in deleting data: ". mysqli_error($conn)."<br>";
    }
