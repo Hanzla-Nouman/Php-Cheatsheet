@@ -39,3 +39,13 @@ $sqlForTable = "CREATE TABLE`staff2` (`Roll No.` INT NOT NULL AUTO_INCREMENT , `
    }else{
     echo "Error creating Table: ". mysqli_error($conn)."<br>";
    }
+   
+// Insert data into table
+$sqlForTable = "INSERT INTO `staff2` (`Roll No.`, `Name`, `Age`, `Exp`) VALUES ('', 'Nouman', '23', '4');
+";
+
+   if(mysqli_query($conn, $sqlForTable)){
+    echo "Data inserted successfully <br>";
+   }else{
+    echo "Error in inserting data: ". mysqli_error($conn)."<br>";
+   }
